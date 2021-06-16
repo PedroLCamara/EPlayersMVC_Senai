@@ -9,6 +9,6 @@ namespace EPlayersMVC.Interfaces
         void Alterar(Equipe E);
         void Criar(Equipe E);
         void Deletar(int ID);
-        List<Equipe> LerTodas(Equipe E);
+        List<Equipe> LerTodas();
     }
 }

@@ -41,7 +41,7 @@ namespace EPlayersMVC.Models
             this.ReescreverCSV(CAMINHO, Linhas);
         }
 
-        public List<Equipe> LerTodas(Equipe E)
+        public List<Equipe> LerTodas()
         {
             List<Equipe> Equipes = new List<Equipe>();
             string[] Linhas = File.ReadAllLines(CAMINHO);
