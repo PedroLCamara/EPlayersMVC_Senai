@@ -25,7 +25,7 @@ namespace EPlayersMVC.Controllers
             EquipeModel.Criar(NovaEquipe);
             ViewBag.Equipes = EquipeModel.LerTodas();
 
-            return LocalRedirect("~/Equipe");
+            return LocalRedirect("~/Equipe/Index");
         }
     }
 }

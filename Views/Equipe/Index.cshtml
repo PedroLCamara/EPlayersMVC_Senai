@@ -25,9 +25,11 @@
     <tbody>
         @foreach (Equipe item in ViewBag.Equipes)
         {
-            <tr>@item.IDEquipe</tr>
-            <tr>@item.Nome</tr>
-            <tr>@item.Imagem</tr>
+            <tr>
+                <td>@item.IDEquipe</td>
+                <td>@item.Nome</td>
+                <td>@item.Imagem</td>
+            </tr>
         }
     </tbody>
 </table>
