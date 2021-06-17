@@ -56,5 +56,8 @@ namespace EPlayersMVC.Models
             }
             return Equipes;
         }
+        public string RetornarCaminho(){
+            return CAMINHO;
+        }
     }
 }

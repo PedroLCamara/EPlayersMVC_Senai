@@ -1,4 +1,4 @@
-@model Jogador
+@model Jogador 
 @{
     ViewData["Title"] = "Jogadores";
 }
@@ -10,7 +10,17 @@
     <input type="text" name="Nome" />
 
     <label>ID da equipe</label>
-    <input type="text" name="IdEquipe" />
+    <select name="IdEquipe">
+        <optgroup>
+            @{
+                Jogador LerEquipes = new Jogador();
+                foreach (var item in LerEquipes.LerIdsEquipesDisponiveis())
+                {
+                    <option>@item</option>
+                }
+            }
+        </optgroup>
+    </select>
 
 
     <button type="submit">Cadastrar</button>  

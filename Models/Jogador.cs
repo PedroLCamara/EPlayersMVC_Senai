@@ -58,5 +58,17 @@ namespace EPlayersMVC.Models
             }
             return Jogadores;
         }
+        public List<string> LerIdsEquipesDisponiveis(){
+            List<string> IDsEquipes = new List<string>();
+            Equipe EquipeLeitura = new Equipe();
+            string[] Linhas = File.ReadAllLines(EquipeLeitura.RetornarCaminho());
+            foreach (var item in Linhas)
+            {
+                string[] Linha = item.Split(";");
+                string ID = Linha[0];
+                IDsEquipes.Add(ID);
+            }
+            return IDsEquipes;
+        }
     }
 }
