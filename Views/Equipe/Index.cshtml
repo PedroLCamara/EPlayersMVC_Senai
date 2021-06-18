@@ -29,7 +29,10 @@
                 <td>@item.IDEquipe</td>
                 <td>@item.Nome</td>
                 <td>
-                    <img src="/images/Equipes/@item.Imagem" alt="Logo do time @item.Nome" />
+                    <img style="width: 25px;" src="/images/Equipes/@item.Imagem" alt="Logo do time @item.Nome" />
+                </td>
+                <td>
+                    <a class="navbar-brand" asp-area="" asp-controller="Equipe" asp-action="Deletar" asp-route-id="@item.IDEquipe">Excluir</a>
                 </td>
             </tr>
         }

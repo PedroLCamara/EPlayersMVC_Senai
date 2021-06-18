@@ -40,9 +40,17 @@ namespace EPlayersMVC.Controllers
             }
             else
             {
-                NovaEquipe.Imagem = "padrao.png";
+                NovaEquipe.Imagem = "padrao.jpg";
             }
             EquipeModel.Criar(NovaEquipe);
+            ViewBag.Equipes = EquipeModel.LerTodas();
+
+            return LocalRedirect("~/Equipe/Index");
+        }
+
+        [Route("Deletar/{id}")]
+        public IActionResult Excluir(int id){
+            EquipeModel.Deletar(id);
             ViewBag.Equipes = EquipeModel.LerTodas();
 
             return LocalRedirect("~/Equipe/Index");
