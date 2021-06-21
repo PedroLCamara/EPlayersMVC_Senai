@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+.container_grid{
+    width: 80vw;
+    margin: 0 auto;
+}
+header{
+    align-items: center;
+    background-color: #1E1C21;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+}
+.container_header{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: auto;
+    height: auto;
+    max-height: 40px;
+    max-width: 252px;
+}
+.btn_menu{
+    display: none;
+}
+.nav_header{
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav_header a{
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    line-height: 29,3px;
+    font-size: 25px;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+    border: 0px;
+}
+.main_bg{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(assets_/raze2.png), url(assets_/ziggs2.png), linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), linear-gradient(90deg, #FF0000 0%, #010101 17.19%, #010101 50.52%, #010101 82.29%, #FF0000 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: auto;
+    width: 100%;
+}
+.container_cadastro_jogador{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+}
+.cadastro_jogador{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 60px;
+    width: 100%;
+    height: auto;
+}
+.cadastro_jogador h1{
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.botao_cadastrar{
+    background-color: #590101;
+    border: 0;
+    border-radius: 20px;
+    width: 248px;
+    height: 64px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: white;
+    text-transform: uppercase;
+}
+.campo_cadastro{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.campo_cadastro span{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: white;
+    margin-bottom: 10px;
+}
+.input_cadastro{
+    width: 350px;
+    height: 30px;
+    border-radius: 20px;
+    border: 0px;
+    background-color: white;
+    color: black;
+    text-transform: unset;
+    font-size: unset;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+}
+.container_lista_jogadores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    width: 100%;
+    height: auto;
+}
+.lista_jogadores{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.lista_jogadores h2{
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.tabela_jogadores{
+    width: 600px;
+    height: auto;
+    margin-bottom: 30px;
+    border-collapse: collapse;
+}
+th{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: start;
+    width: 50%;
+    padding: 5px 10px;
+    border: 2px solid #000000;
+}
+td{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: start;
+    width: 50%;
+    padding: 5px 10px;
+    background-color: black;
+}
+table.tabela_jogadores thead{
+    background-color: #590101;
+    border-bottom: 2px solid white;
+}
+footer{
+    width: 100%;
+    height: 250px;
+    background-color: #1E1C21;
+}
+@media (max-width: 1330px){
+    .logo{
+        margin-right: 20px;
+    }
+    .btn_menu{
+        display: none;
+    }
+    .nav_header a{
+        font-size: 23px;
+    }
+}
+@media (max-width: 1120px){
+    .btn_menu{
+        display: none;
+    }
+    .nav_header a{
+        font-size: 19px;
+    }
+    .logo{
+        max-width: 180px;
+    }
+}
+@media (max-width: 890px){
+    .btn_menu{
+        display: unset;
+        font-size: 40px;
+        color: white;
+    }
+    .nav_header{
+        display: none;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        justify-content: space-around;
+        height: 400px;
+        background-color: black;
+    }
+}
+@media (max-width: 767px){
+    footer{
+        height: 500px;
+    }
+    .tabela_jogadores{
+        width: 100%;
+    }
+}
+@media (max-width: 440px){
+    .campo_cadastro{
+        width: 100%;
+    }
+    .input_cadastro{
+        width: 100%;
+    }
+}
+@media (max-width: 270px){
+    .logo{
+        max-width: 60vw;
+    }
+    .btn_menu{
+        font-size: 20vw;
+    }
+    footer{
+        height: 560px;
+    }
+}
+@media (max-width: 250px){
+    .botao_cadastrar{
+        width: 100%;
+        font-size: 12vw;
+    }
+    th{
+        font-size: 8vw;
+    }
+    td{
+        font-size: 8vw;
+    }
+    td img{
+        width: 15vw;
+        height: 15vw;
+    }
+}
+@media (max-width: 190px){
+    .cadastro_jogador h1{
+        font-size: 20vw;
+    }
+    .campo_cadastro span{
+        font-size: 14vw;
+    }
+    .lista_jogadores h2{
+        font-size: 20vw;
+    }
+}
+@media (max-width:150px){
+    .nav_header a{
+        font-size: 10vw;
+    }
+}
+@media (max-width: 115px){
+    .logo{
+        max-width: 50vw;
+    }
+}
+@media (max-width: 103px){
+    th{
+        font-size: 6vw;
+    }
+    td{
+        font-size: 6vw;
+    }
+}
+@media (max-width: 84px){
+    th{
+        font-size: 4vw;
+    }
+    td{
+        font-size: 4vw;
+    }
+}
+@media (max-width: 75px){
+    .btn_menu{
+        font-size: 10vw;
+    }
+}
+@media (max-width: 71px){
+    th{
+        font-size: 2vw;
+    }
+    td{
+        font-size: 2vw;
+    }
+}
+@media(max-width: 120px){
+    footer{
+        height: 780px;
+    }
+}
+@media (min-height: 970px){
+    .main_bg{
+        height: 90vh;
+    }
+    body{
+        background-color: #1E1C21;
+    }
+}

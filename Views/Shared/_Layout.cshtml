@@ -1,33 +1,31 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - EPlayersMVC</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <title>@ViewData["Title"] - E-Players</title>
+    <link rel="stylesheet" href="~/css/index.css" />
+    <script src="https://kit.fontawesome.com/77a9a4e10d.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">EPlayersMVC</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+        <div class="container_grid">
+            <div class="container_header">
+                <a asp-area="" asp-controller="Home" asp-action="Index">
+                    <img class="logo" src="/assets_/logo.svg" alt="Logo do E-Players, portal de campeonatos online">
+                </a>
+                <a class="btn_menu" onclick="botaoDoMenu()">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <nav id="menu_header" class="nav_header">
+                    <a asp-area="" asp-controller="Home" asp-action="Index">Início</a>
+                    <a asp-area="" asp-controller="Home" asp-action="Index">Horários</a>
+                    <a asp-area="" asp-controller="" asp-action="">Campeonatos</a>
+                    <a asp-area="" asp-controller="" asp-action="">Resultados</a>
+                    <a asp-area="" asp-controller="Home" asp-action="Index">Notícias</a>
+                </nav>
             </div>
-        </nav>
+        </div>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -35,9 +33,54 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - EPlayersMVC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer>
+        <div class="container_grid">
+            <div class="container_footer">
+                <nav class="nav_footer">
+                    <span>Links úteis</span>
+                    <ul class="lista_footer">
+                        <li><a href="#">Regras de utilização</a></li>
+                        <li><a href="#">Suporte</a></li>
+                        <li><a href="#">Central de ajuda</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav>
+                <nav class="nav_footer">
+                    <span>Páginas</span>
+                    <ul class="lista_footer">
+                      <li><a asp-area="" asp-controller="Home" asp-action="Index">Início</a></li>
+                      <li><a asp-area="" asp-controller="" asp-action="">Campeonatos</a></li>
+                      <li><a asp-area="" asp-controller="" asp-action="">Resultados</a></li>
+                      <li><a asp-area="" asp-controller="Home" asp-action="Index">Notícias</a></li>
+                      <li><a asp-area="" asp-controller="Equipe" asp-action="Index">Login/Cadastro</a></li>
+                    </ul>
+                </nav>
+                <a class="logo_footer" href="#">
+                    <img class="imagem_footer" src="/assets_/logo.svg" alt="Logo do E-Players, portal de campeonatos online">
+                </a>
+                <div class="contato_footer">
+                    <span>Faça parte do nosso clan, assine nossa newsletter!</span>
+                    <form class="formulario_newsletter">
+                        <input class="campo_newsletter" type="email" placeholder="E-mail">
+                        <button class="botao_newsletter">Entrar</button>
+                    </form>
+                    <div class="redes_sociais_footer">
+                        <span>Siga-nos em:</span>
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <img src="/assets_/instagram.png"
+                                alt="Logo da rede social Instagram, redirecionará para a página do E-Players nesta rede social">
+                        </a>
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="/assets_/facebook.png"
+                                alt="Logo da rede social Facebook, redirecionará para a página do E-Players nesta rede social">
+                        </a>
+                        <a href="https://www.youtube.com" target="_blank">
+                            <img src="/assets_/youtube.png"
+                                alt="Logo da rede social Youtube, redirecionará para a página do E-Players nesta rede social">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

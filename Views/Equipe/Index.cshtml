@@ -2,7 +2,69 @@
 @{
     ViewData["Title"] = "Equipes";
 }
-<form method="POST" action='@Url.Action("Cadastrar")' enctype="multipart/form-data">
+
+<head>
+    <link rel="stylesheet" href="~/css/cadastro_times.css">
+</head>
+<div onclick="botaoDoMenuFechar()">
+    <div class="main_bg">
+        <section class="cadastro_equipe">
+            <div class="container_grid">
+                <div class="container_cadastro_equipe">
+                    <h1>Cadastro de equipe</h1>
+                    <form>
+                        <div class="campo_cadastro">
+                            <label class="texto_cadastro">ID da equipe</label>
+                                <input class="input_cadastro" type="text" name="IdEquipe">
+                        </div>
+                        <div class="campo_cadastro">
+                            <label class="texto_cadastro">Nome da equipe</label>
+                                <input class="input_cadastro" type="text" name="Nome">
+                        </div>
+                        <div class="campo_cadastro">
+                            <label class="texto_cadastro">Emblema da equipe</label>
+                                <input class="input_cadastro_file" type="file" accept="image/*" name="Imagem">
+                        </div>
+                        <button class="botao_cadastrar" type="submit">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="lista_equipes">
+            <div class="container_grid">
+                <div class="container_lista_equipes">
+                    <h2>Lista de times</h2>
+                    <table class="tabela_equipes">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Logo</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        @foreach (Equipe item in ViewBag.Equipes)
+                        {
+                            <tr>
+                                <td>@item.IDEquipe</td>
+                                <td>@item.Nome</td>
+                                <td>
+                                    <img style="width: 25px;" src="/images/Equipes/@item.Imagem"
+                                    alt="Logo do time @item.Nome" />
+                                </td>
+                                <td>
+                                    <a class="navbar-brand" asp-area="" asp-controller="Equipe" asp-action="Deletar"
+                                    asp-route-id="@item.IDEquipe">Excluir?</a>
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+@* <form method="POST" action='@Url.Action("Cadastrar")' enctype="multipart/form-data">
     <label>ID</label>
     <input type="text" name="IdEquipe" />
 
@@ -14,27 +76,28 @@
 
 
     <button type="submit">Cadastrar</button>
-</form>
+    </form>
 
-<table class="table table-striped table-responsive">
+    <table class="table table-striped table-responsive">
     <thead>
-        <th>ID</th>
-        <th>Nome</th>
-        <th>Logo</th>
+    <th>ID</th>
+    <th>Nome</th>
+    <th>Logo</th>
     </thead>
     <tbody>
-        @foreach (Equipe item in ViewBag.Equipes)
-        {
-            <tr>
-                <td>@item.IDEquipe</td>
-                <td>@item.Nome</td>
-                <td>
-                    <img style="width: 25px;" src="/images/Equipes/@item.Imagem" alt="Logo do time @item.Nome" />
-                </td>
-                <td>
-                    <a class="navbar-brand" asp-area="" asp-controller="Equipe" asp-action="Deletar" asp-route-id="@item.IDEquipe">Excluir</a>
-                </td>
-            </tr>
-        }
+    @foreach (Equipe item in ViewBag.Equipes)
+    {
+    <tr>
+    <td>@item.IDEquipe</td>
+    <td>@item.Nome</td>
+    <td>
+    <img style="width: 25px;" src="/images/Equipes/@item.Imagem" alt="Logo do time @item.Nome" />
+    </td>
+    <td>
+    <a class="navbar-brand" asp-area="" asp-controller="Equipe" asp-action="Deletar"
+    asp-route-id="@item.IDEquipe">Excluir</a>
+    </td>
+    </tr>
+    }
     </tbody>
-</table>
+    </table> *@

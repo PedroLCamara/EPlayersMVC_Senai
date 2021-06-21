@@ -1,0 +1,975 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+.container_grid{
+    width: 1200px;
+    margin: 0 auto;
+}
+header{
+    display: flex;
+    align-items: center;
+    background-color: #1E1C21;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+}
+.container_header{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: auto;
+    height: auto;
+    max-height: 40px;
+    max-width: 252px;
+}
+.btn_menu{
+    display: none;
+}
+.nav_header{
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+}
+.nav_header a{
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    line-height: 29,3px;
+    font-size: 25px;
+}
+.banner{
+    width: 100%;
+    height: 504px;
+    margin-top: 60px;
+    background: -webkit-linear-gradient(left, rgba(67,75,103,1) 0%, rgba(52,58,81,1) 35%, rgba(23,25,35,1) 57%, rgba(0,0,0,1) 100%);}
+.container_banner{
+    display: flex;
+    width: 90vw;
+    justify-content: center;
+}
+.img_banner{
+    width: 790px;
+}
+.banner_texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.banner_texto h1{
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+    font-size: 85px;
+    color: white;
+    text-align: center;
+}
+.banner_texto span{
+    margin: 30px 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+.banner_texto a{
+    padding-top: 16px;
+    padding-left: 47px;
+    padding-right: 47px;
+    padding-bottom: 19px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 700;
+    width: 284px;
+    height: 73px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    background-color: #17217F;
+    border-radius: 20px;
+}
+.logo_jogos{
+    display: flex;
+    height: 110px;
+    width: 100%;
+    background-color: black;
+}
+.container_logos{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo_r6{
+    width: 160px;
+    height: 60px;
+}
+.logo_vava{
+    width: 168px;
+    height: 22px;
+}
+.logo_lol{
+    width: 146px;
+    height: 56px;
+}
+.logo_cs{
+    width: 161px;
+    height: 65px;
+}
+.logo_fifa{
+    width: 100px;
+    height: 49px;
+}
+.como_participar{
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(178deg, rgba(0, 0, 0, 0) 9.9%, #000000 9.91%, #000000 51.56%, #000000 90.1%, rgba(0, 0, 0, 0) 90.11%), linear-gradient(0deg, rgba(14, 36, 237, 0.45), rgba(14, 36, 237, 0.45)), url("../assets_/bg-lol.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.container_como_participar{
+    z-index: 98;
+    top: 0;
+    display: flex;
+    height: 400px;
+    width: 100%;
+}
+.como_participar_texto{
+    height: 200px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+.como_participar_texto h2{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 46.88px;
+    text-align: center;
+    margin: 5px 0;
+}
+.como_participar_texto p{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 25.78px;
+    text-align: justify;
+    width: 522px;
+    height: 100%;
+    text-indent: 30px;
+    margin-bottom: 0;
+}
+.container_como_participar img{
+    width: auto;
+    height: 100%;
+}
+.partidas{
+    display: flex;
+    width: 100%;
+    height: 110px;
+    background-color: black;
+}
+.container_partidas{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.ao_vivo{
+    display: flex;
+    height: 80%;
+    width: 35%;
+    text-decoration: none;
+    border-right: 2px solid white;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 10px;
+    margin-right: 30px;
+}
+.ao_vivo h2{
+    text-transform: uppercase;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+}
+.em_breve{
+    display: flex;
+    height: 80%;
+    width: 65%;
+    align-items: center;
+    justify-content: space-between;
+}
+.em_breve h2{
+    text-transform: uppercase;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+}
+.partida{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    font-size: 25px;
+    font-weight: 400;
+}
+.partida img{
+    width: 50px;
+    height: 50px;
+}
+.noticias_horarios{
+    height: 900px;
+    width: 100%;
+    background-color: #0F1117;
+}
+.container_noticias_horarios{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+.noticias{
+    height: 100%;
+    width: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.noticias h2{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 30px;
+}
+.linha_noticias{
+    height: 93%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.box_noticia{
+    margin-right: 50px;
+    margin-bottom: 20px;
+    height: 350px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #303030 0%, #000000 100%);
+    box-shadow: 0px 35px 75px rgba(0, 0, 0, 0.5);
+}
+.box_noticia img{
+    width: 100%;
+    height: 160px;
+}
+.box_noticia h3{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+    margin-top: 6px;
+    margin-left: 10px;
+}
+.box_noticia p{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    margin: 0px 10px 13px 10px;
+    text-align: justify;
+}
+.horarios{
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.horarios h2{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 34px;
+}
+.horarios_box{
+    background:  linear-gradient(360deg, #000000 0%, #2C2C2C 23.96%, #2C2C2C 50%, #2C2C2C 80.21%, #000000 100%);
+    height: 772px;
+    width: 290px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.info_partida{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+}
+.jogo_partida{
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+}
+.jogo_partida img{
+    width: 30px;
+    height: 30px
+}
+footer{
+    display: flex;
+    width: 100%;
+    height: 250px;
+    background-color: black;
+}
+.container_footer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.nav_footer{
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: flex-start;
+    height: 125px;
+    width: auto;
+}
+.nav_footer span{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    color: white;
+}
+.lista_footer{
+    list-style-image: url("../assets_/lista_ponto.png");
+    list-style-position: inside;
+}
+.lista_footer a{
+    text-decoration: none;
+    font-size: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    color: white;
+}
+.contato_footer{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 125px;
+}
+.contato_footer span{
+    font-size: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    color: white;
+}
+.formulario_newsletter{ 
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-bottom: 38px;
+}
+.campo_newsletter{
+    width: 192px;
+    height: 34px;
+    background-color: white;
+    color: #B8B3B3;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    border: 0px;
+}
+.botao_newsletter{
+    width: 153px;
+    height: 34px;
+    background-color: #001F70;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    border: 0px;
+}
+.redes_sociais_footer{
+    display: flex;
+    width: 345px;
+    height: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+.redes_sociais_footer span{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: justify;
+}
+.redes_sociais_footer img{
+    width: 30px;
+    height: 30px;
+}
+@media (max-width: 1259px){
+    .container_grid{
+        width: 960px;
+    }
+    .logo{
+        margin-right: 20px;
+    }
+    .btn_menu{
+        display: none;
+    }
+    .nav_header a{
+        font-size: 23px;
+    }
+    .banner{
+        height: 460px;
+    }
+    .container_banner img{
+        width: 730px;
+        margin-top: 7;
+        height: auto;
+    }
+    .banner_texto h1{
+        font-size: 70px;
+    }
+    .banner_texto span{
+        font-size: 25px;
+    }
+    .banner_texto a{
+        width: 235px;
+        font-size: 28px;
+        padding-top: 6px;
+        padding-left: 27px;
+        padding-right: 27px;
+        padding-bottom: 9px;
+        height: 60px;
+    }
+    .como_participar{
+        height: 344px;
+    }
+    .como_participar p{
+        font-size: 19px;
+    }
+    .como_participar h2{
+        font-size: 30px;
+    }
+    .como_participar img{
+        width: 470px;   
+        margin-left: -32px;   
+    }
+    .partidas span{
+        font-size: 20px;
+    }
+    .partidas h2{
+        font-size: 20px;
+    }
+    .partidas a{
+        font-size: 20px;
+    }
+    .partidas img{
+        width: 30px;
+        height: 30px;
+    }
+    .noticias h2{
+        font-size: 28px;
+    }
+    .box_noticia{
+        width: 200px;
+        margin-right: 40px;
+    }
+    .box_noticia img{
+        height: 140px;
+    }
+    .horarios_box{
+        width: 227px;
+    }
+    .horarios h2{
+        font-size: 28px;
+        margin-bottom: 36px;
+    }
+    .container_footer{
+        justify-content: space-between;
+    }
+    .nav_footer span{
+        font-size: 22px;
+    }
+    .lista_footer a{
+        font-size: 13px;
+    }
+    .imagem_footer{
+        max-width: 300px;
+    }
+    .contato_footer{
+        font-size: 14.5px;
+    }
+    .campo_newsletter{
+        width: 221px;
+    }
+    .botao_newsletter{
+        width: 126px;
+    }
+    .redes_sociais_footer{
+        font-size: 22px;
+    }
+}
+@media (max-width: 991px){
+    .container_grid{
+        width: 720px;
+    } 
+    .btn_menu{
+        display: none;
+    }
+    .nav_header a{
+        font-size: 19px;
+    }
+    .logo{
+        max-width: 180px;
+    }
+    .banner{
+        height: 322px;
+    }
+    .container_banner img{
+        width: 508px;
+    }
+    .banner_texto h1{
+        font-size: 60px
+    }
+    .banner_texto span{
+        font-size: 22px;
+    }
+    .banner_texto a{
+        width: 200px;
+        font-size: 22px;
+        padding-top: 12px;
+        padding-left: 27px;
+        padding-right: 27px;
+        padding-bottom: 0px;
+        height: 50px;
+    }
+    .logo_jogos{
+        display: flex;
+        height: 90px;
+    }
+    .logo_r6{
+        width: 125px;
+        height: 50px;
+    }
+    .logo_vava{
+        width: 125px;
+        height: 20px;
+    }
+    .logo_lol{
+        width: 125px;
+        height: 50px;
+    }
+    .logo_cs{
+        width: 125px;
+        height: 60px;
+    }
+    .logo_fifa{
+        width: 90px;
+        height: 40px;
+    }
+    .container_como_participar{
+        justify-content: center;
+        width: 100%;
+    }
+    .como_participar img{
+        width: 198px;
+        height: 233px;
+        margin: 111px 0 0 0;
+    }
+    .img_largura_maior{
+        display: none;
+    }
+    .partidas h2{
+        font-size: 15px
+    }
+    .partidas span{
+        font-size: 15px;
+    }
+    .noticias_horarios{
+        height: auto;
+    }
+    .container_noticias_horarios{
+        flex-direction: column;
+        height: auto;
+    }
+    .box_noticia{
+        margin-right: 0px;
+    }
+    .horarios{
+        height: auto;
+        width: 100%;
+    }
+    .horarios_box{
+        width: 100%;
+        height: 500px;
+        margin-bottom: 5px;
+        flex-direction: unset;
+        flex-wrap: wrap;
+    }
+    .info_partida{
+        width: 50%;
+    }
+    .jogo_partida{
+        margin-bottom: 0px;
+        border-right: 2px solid white;
+        border-left: 2px solid white;
+    }
+    .nav_footer span{
+        font-size: 20px;
+    }
+    .lista_footer a{
+        font-size: 10px;
+    }
+    .imagem_footer{
+        max-width: 150px;
+    }
+    .contato_footer span{
+        font-size: 10px;
+    }
+    .campo_newsletter{
+        width: 150px;
+    }
+    .botao_newsletter{
+        width: 80px;
+    }
+    .redes_sociais_footer span{
+        font-size: 20px;
+    }
+    .contato_footer{
+        width: auto;
+    }
+    .redes_sociais_footer{
+        width: 240px;
+    }
+}
+@media (max-width: 767px){
+    .container_grid{
+        width: 88vw;
+    }
+    .btn_menu{
+        display: unset;
+        font-size: 40px;
+        color: white;
+    }
+    .nav_header{
+        display: none;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        justify-content: space-around;
+        height: 400px;
+        background-color: black;
+    }
+    .banner{
+        height: 267px;
+    }
+    .container_banner img{
+        width: 420px;
+    }
+    .banner_texto h1{
+        font-size: 50px;
+    }
+    .banner_texto span{
+        font-size: 16px;
+    }
+    .banner_texto a{
+        width: 200px;
+        font-size: 18px;
+        padding-top: 10px;
+        padding-left: 27px;
+        padding-right: 27px;
+        padding-bottom: 0px;
+        height: 44px;
+    }
+    .como_participar img{
+        display: none;
+    }
+    .container_como_participar{
+        justify-content: center
+    }
+    .noticias_horarios{
+        height: auto;
+    }
+    .container_noticias_horarios{
+        height: auto;
+    }
+    .box_noticia{
+        margin-right: 0px;
+    }
+    footer{
+        height: 500px;
+    }
+    .container_footer{
+        flex-direction: column;
+    }
+}
+@media (max-width: 625px){
+    .logo_r6{
+        width: 20vw;
+        height: auto;
+    }
+    .logo_vava{
+        width: 15vw;
+        height: auto;
+    }
+    .logo_lol{
+        width: 15vw;
+        height: auto;
+    }
+    .logo_cs{
+        width: 20vw;
+        height: auto;
+    }
+    .logo_fifa{
+        width: 12vw;
+        height: auto;
+    }
+}
+@media (max-width: 585px){
+    .banner{
+        height: auto;
+    }
+    .container_banner img{
+        width: 60vw;
+    }
+    .banner_texto{
+        width: 40vw;
+    }
+    .banner_texto h1{
+        font-size: 8vw;
+    }
+    .banner_texto span{
+        font-size: 4vw;
+    }
+    .banner_texto a{
+        width: 40vw;
+        font-size: 4vw;
+        padding-top: 3vw;
+        padding-left: 4vw;
+        padding-right: 4vw;
+        padding-bottom: 3vw;
+        height: auto;
+    }
+    .como_participar{
+        height: 420px;
+    }
+    .como_participar h2{
+        font-size: 6vw;
+    }
+    .como_participar_texto p{
+        width: 100%;
+        font-size: 3.8vw;
+    }
+    .partidas{
+        height: auto;
+    }
+    .container_partidas{
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .ao_vivo{
+        height: auto;
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 15px;
+    }
+    .em_breve{
+        height: auto;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .partidas h2{
+        font-size: 4vw;
+    }
+    .partida{
+        margin-bottom: 20px;
+    }
+    .partidas span{
+        font-size: 4vw;
+    }
+    .partidas img{
+        height: 7vw;
+        width: 7vw;
+    }
+}
+@media (max-width: 585px){
+    .ao_vivo{
+        border-right: 0px;
+    }
+}
+@media (max-width: 454px){
+    .noticias{
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .linha_noticias{
+        justify-content: center;
+    }
+}
+@media (max-width: 440px){
+    .horarios_box{
+        height: 300px;
+    }
+    .info_partida{
+        font-size: 3vw;
+    }
+    .jogo_partida{
+        font-size: 4vw;
+    }
+    .jogo_partida img{
+        width: 7vw;
+        height: 7vw;
+    }
+    .imagem_footer{
+    max-width: 100%;
+    }
+    .logo_footer{
+        display: flex;
+        width: 60vw;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+@media (max-width: 270px){
+    .logo{
+        max-width: 60vw;
+    }
+    .btn_menu{
+        font-size: 20vw;
+    }
+    footer{
+        height: 560px;
+    }
+    .imagem_footer{
+        max-width: 100%;
+    }
+    .contato_footer{
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+    .contato_footer span{
+        font-size: 4vw;
+        text-align: center;
+        width: 100vw;
+    }
+    .formulario_newsletter{
+        width: 100vw;
+        justify-content: center;
+    }
+    .campo_newsletter{
+        width: 55vw;
+        font-size: 10vw;
+    }
+    .botao_newsletter{
+        width: 30vw;
+        font-size: 10vw;
+    }
+    .redes_sociais_footer{
+        width: 100vw;
+        flex-direction: column;
+    }
+    .redes_sociais_footer span{
+        font-size: 20px;
+    }
+    .redes_sociais_footer img{
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 201px){
+    .box_noticia{
+        width: 100%;
+    }
+    .box_noticia img{
+        height: auto;
+    }
+    .box_noticia h3{
+        font-size: 10vw;
+    }
+    .box_noticia p{
+        font-size: 10vw;
+    }
+}
+@media (max-width:150px){
+    .nav_header a{
+        font-size: 10vw;
+    }
+}
+@media (max-width: 132px){
+    .horarios h2{
+        font-size: 20vw;
+    }
+    .noticias h2{
+        font-size: 20vw;
+    }
+}
+@media(max-width: 120px){
+    footer{
+        height: 780px;
+    }
+}
+@media (max-width: 115px){
+    .logo{
+        max-width: 50vw;
+    }
+}
+@media (max-width: 75px){
+    .btn_menu{
+        font-size: 10vw;
+    }
+    .nav_footer span{
+        font-size: 25vw;
+    }
+    .lista_footer a{
+        font-size: 10vw;
+    }
+}
+@media (min-height: 2330px){
+    body{
+        background-color: black;
+    }
+}
