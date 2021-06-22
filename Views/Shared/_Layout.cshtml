@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="~/css/index.css" />
     <script src="https://kit.fontawesome.com/77a9a4e10d.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header>
         <div class="container_grid">
@@ -23,6 +25,18 @@
                     <a asp-area="" asp-controller="" asp-action="">Campeonatos</a>
                     <a asp-area="" asp-controller="" asp-action="">Resultados</a>
                     <a asp-area="" asp-controller="Home" asp-action="Index">Notícias</a>
+                    @{
+                        if (ViewBag.Username != null)
+                        {
+                            <a>Olá @ViewBag.Username!</a>
+                            //Configurações da conta no link acima
+                            <a asp-area="" asp-controller="Login" asp-action="Logout">Logout</a>
+                        }
+                        else
+                        {
+                            <a asp-area="" asp-controller="Login" asp-action="Index">Login</a>
+                        }
+                    }
                 </nav>
             </div>
         </div>
@@ -48,15 +62,16 @@
                 <nav class="nav_footer">
                     <span>Páginas</span>
                     <ul class="lista_footer">
-                      <li><a asp-area="" asp-controller="Home" asp-action="Index">Início</a></li>
-                      <li><a asp-area="" asp-controller="" asp-action="">Campeonatos</a></li>
-                      <li><a asp-area="" asp-controller="" asp-action="">Resultados</a></li>
-                      <li><a asp-area="" asp-controller="Home" asp-action="Index">Notícias</a></li>
-                      <li><a asp-area="" asp-controller="Equipe" asp-action="Index">Login/Cadastro</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index">Início</a></li>
+                        <li><a asp-area="" asp-controller="" asp-action="">Campeonatos</a></li>
+                        <li><a asp-area="" asp-controller="" asp-action="">Resultados</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index">Notícias</a></li>
+                        <li><a asp-area="" asp-controller="Equipe" asp-action="Index">Login/Cadastro</a></li>
                     </ul>
                 </nav>
                 <a class="logo_footer" href="#">
-                    <img class="imagem_footer" src="/assets_/logo.svg" alt="Logo do E-Players, portal de campeonatos online">
+                    <img class="imagem_footer" src="/assets_/logo.svg"
+                        alt="Logo do E-Players, portal de campeonatos online">
                 </a>
                 <div class="contato_footer">
                     <span>Faça parte do nosso clan, assine nossa newsletter!</span>
@@ -88,4 +103,5 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>

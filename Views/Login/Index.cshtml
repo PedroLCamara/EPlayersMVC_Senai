@@ -1,0 +1,30 @@
+@{
+    ViewData["Title"] = "Login";
+}
+<head>
+    <link rel="stylesheet" href="~/css/login.css">
+</head>
+
+<div onclick="botaoDoMenuFechar()">
+    <div class="main_bg">
+        <section class="cadastro_jogador">
+            <div class="container_grid">
+                <div class="container_cadastro_jogador">
+                    <h1>Login</h1>
+                    <form method="POST" action='@Url.Action("Logar")' >
+                        <div class="campo_cadastro">
+                            <label class="texto_cadastro">E-mail</label>
+                            <input class="input_cadastro" type="email" name="Email" required>
+                        </div>
+                        <div class="campo_cadastro">
+                            <label class="texto_cadastro">Senha</label>
+                            <input class="input_cadastro" type="text" name="Senha" required>
+                        </div>
+                        <button class="botao_cadastrar">Entrar</button>
+                    </form>
+                    <div class="erro">@TempData.Peek("Mensagem")</div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

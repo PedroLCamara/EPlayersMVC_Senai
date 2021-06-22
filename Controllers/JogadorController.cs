@@ -22,8 +22,8 @@ namespace EPlayersMVC.Controllers
             NovoJogador.IDJogador = Int32.Parse(Form["IdJogador"]);
             NovoJogador.Nome = Form["Nome"];
             NovoJogador.IDEquipe = Int32.Parse(Form["IdEquipe"]);
-            NovoJogador.Nome = Form["Email"];
-            NovoJogador.Nome = Form["Senha"];
+            NovoJogador.Email = Form["Email"];
+            NovoJogador.Senha = Form["Senha"];
             JogadorModel.Criar(NovoJogador);
             ViewBag.Jogadores = JogadorModel.LerTodas();
 

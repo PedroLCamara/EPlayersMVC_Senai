@@ -46,7 +46,7 @@
                                 </optgroup>
                             </select>
                         </div>
-                        <button class="botao_cadastrar">Cadastrar</button>
+                        <button class="botao_cadastrar" type="submit">Cadastrar</button>
                     </form>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Nome</th>
-                                <th>ID da equipe</th>
+                                <th>Email</th>
                             </tr>
                         </thead>
                         @foreach (Jogador item in ViewBag.Jogadores)
@@ -68,7 +68,7 @@
                             <tr>
                                 <td>@item.IDJogador</td>
                                 <td>@item.Nome</td>
-                                <td>@item.IDEquipe</td>
+                                <td>@item.Email</td>
                             </tr>
                         }
                     </table>
