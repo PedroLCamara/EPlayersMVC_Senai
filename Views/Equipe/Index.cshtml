@@ -12,14 +12,14 @@
             <div class="container_grid">
                 <div class="container_cadastro_equipe">
                     <h1>Cadastro de equipe</h1>
-                    <form>
+                    <form method="POST" action='@Url.Action("Cadastrar")' enctype="multipart/form-data">
                         <div class="campo_cadastro">
                             <label class="texto_cadastro">ID da equipe</label>
-                                <input class="input_cadastro" type="text" name="IdEquipe">
+                                <input class="input_cadastro" type="number" name="IdEquipe" required>
                         </div>
                         <div class="campo_cadastro">
                             <label class="texto_cadastro">Nome da equipe</label>
-                                <input class="input_cadastro" type="text" name="Nome">
+                                <input class="input_cadastro" type="text" name="Nome" required>
                         </div>
                         <div class="campo_cadastro">
                             <label class="texto_cadastro">Emblema da equipe</label>
@@ -53,8 +53,7 @@
                                     alt="Logo do time @item.Nome" />
                                 </td>
                                 <td>
-                                    <a class="navbar-brand" asp-area="" asp-controller="Equipe" asp-action="Deletar"
-                                    asp-route-id="@item.IDEquipe">Excluir?</a>
+                                    <a class="navbar-brand" asp-area="" asp-controller="Equipe" asp-action="Deletar" asp-route-id="@item.IDEquipe">Excluir?</a>
                                 </td>
                             </tr>
                         }
