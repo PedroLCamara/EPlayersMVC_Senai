@@ -39,7 +39,7 @@ header{
     display: none;
 }
 .nav_header{
-    width: 800px;
+    width: 900px;
     display: flex;
     justify-content: space-between;
 }
@@ -50,7 +50,7 @@ header{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 400;
     line-height: 29,3px;
-    font-size: 25px;
+    font-size: 20px;
 }
 .banner{
     width: 100%;
@@ -254,7 +254,6 @@ header{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding-top: 20px;
 }
 .noticias{
@@ -281,7 +280,7 @@ header{
 }
 .box_noticia{
     margin-right: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 72px;
     height: 350px;
     width: 250px;
     display: flex;
@@ -321,7 +320,6 @@ header{
     color: white;
     font-weight: 700;
     font-size: 30px;
-    margin-bottom: 34px;
 }
 .horarios_box{
     background:  linear-gradient(360deg, #000000 0%, #2C2C2C 23.96%, #2C2C2C 50%, #2C2C2C 80.21%, #000000 100%);
@@ -466,7 +464,7 @@ footer{
     }
     .container_banner img{
         width: 730px;
-        margin-top: 7;
+        margin-top: 7px;
         height: auto;
     }
     .banner_texto h1{
@@ -566,7 +564,7 @@ footer{
         max-width: 180px;
     }
     .banner{
-        height: 322px;
+        height: auto;
     }
     .container_banner img{
         width: 508px;

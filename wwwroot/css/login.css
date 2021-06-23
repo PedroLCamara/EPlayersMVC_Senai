@@ -6,6 +6,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
 
+body{
+    background-color: #1E1C21;
+}
 .container_grid{
     width: 80vw;
     margin: 0 auto;
@@ -70,6 +73,11 @@ iframe{
     height: auto;
     margin-top: 60px;
 }
+.container_cadastro_jogador form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .cadastro_jogador{
     display: flex;
     align-items: center;
@@ -120,6 +128,14 @@ iframe{
     font-size: unset;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 700;
+}
+.container_cadastro_jogador a{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 22px;
+    text-align: center;
+    color: darkblue;
+    font-weight: 400;
+    margin-bottom: 80px;
 }
 .container_lista_jogadores{
     display: flex;

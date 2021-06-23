@@ -20,15 +20,10 @@
                     <i class="fas fa-bars"></i>
                 </a>
                 <nav id="menu_header" class="nav_header">
-                    <a asp-area="" asp-controller="Home" asp-action="Index">Início</a>
-                    <a asp-area="" asp-controller="Home" asp-action="Index">Horários</a>
-                    <a asp-area="" asp-controller="" asp-action="">Campeonatos</a>
-                    <a asp-area="" asp-controller="" asp-action="">Resultados</a>
-                    <a asp-area="" asp-controller="Home" asp-action="Index">Notícias</a>
                     @{
                         if (ViewBag.Username != null)
                         {
-                            <a>Olá @ViewBag.Username!</a>
+                            <a >Olá @ViewBag.Username!</a>
                             //Configurações da conta no link acima
                             <a asp-area="" asp-controller="Login" asp-action="Logout">Logout</a>
                         }
@@ -37,6 +32,11 @@
                             <a asp-area="" asp-controller="Login" asp-action="Index">Login</a>
                         }
                     }
+                    <a asp-area="" asp-controller="Home" asp-action="Index">Início</a>
+                    <a asp-area="" asp-controller="Home" asp-action="Index">Horários</a>
+                    <a asp-area="" asp-controller="" asp-action="">Campeonatos</a>
+                    <a asp-area="" asp-controller="" asp-action="">Resultados</a>
+                    <a asp-area="" asp-controller="Home" asp-action="Index">Notícias</a>
                 </nav>
             </div>
         </div>
